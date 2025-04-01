@@ -70,7 +70,9 @@ export const RadioGroupPaymentIcon = ({
                     <Label
                       className={cx(
                         "pointer-events-none text-secondary",
-                        size === "md" ? "tt-md-md" : "tt-sm-md",
+                        size === "md"
+                          ? "text-md font-medium"
+                          : "text-sm font-medium",
                       )}
                     >
                       {card.title}
@@ -79,7 +81,7 @@ export const RadioGroupPaymentIcon = ({
                       slot="description"
                       className={cx(
                         "text-tertiary",
-                        size === "md" ? "tt-md" : "tt-sm",
+                        size === "md" ? "text-md" : "text-sm",
                       )}
                     >
                       {card.description}

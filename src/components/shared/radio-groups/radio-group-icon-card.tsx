@@ -80,7 +80,9 @@ export const RadioGroupIconCard = ({
                 <span
                   className={cx(
                     "mr-1 text-secondary",
-                    size === "md" ? "tt-lg-semi" : "tt-md-semi",
+                    size === "md"
+                      ? "text-lg font-semibold"
+                      : "text-md font-semibold",
                   )}
                 >
                   {plan.title}
@@ -106,7 +108,9 @@ export const RadioGroupIconCard = ({
                     <span
                       className={cx(
                         "text-secondary",
-                        size === "md" ? "td-md-semi" : "td-sm-semi",
+                        size === "md"
+                          ? "text-display-md font-semibold"
+                          : "text-display-sm font-semibold",
                       )}
                     >
                       {plan.price}
@@ -114,7 +118,7 @@ export const RadioGroupIconCard = ({
                     <span
                       className={cx(
                         "text-tertiary",
-                        size === "md" ? "tt-md" : "tt-sm",
+                        size === "md" ? "text-md" : "text-sm",
                       )}
                     >
                       {plan.secondaryTitle}
@@ -123,7 +127,7 @@ export const RadioGroupIconCard = ({
                   <p
                     className={cx(
                       "text-tertiary",
-                      size === "md" ? "tt-md" : "tt-sm",
+                      size === "md" ? "text-md" : "text-sm",
                     )}
                   >
                     {plan.description}

@@ -103,11 +103,11 @@ const SelectValue = (props: SelectValueProps) => {
 
               {state.selectedItem ? (
                 <section className="flex w-full gap-2 truncate">
-                  <p className="truncate tt-md-md text-primary">
+                  <p className="truncate text-md font-medium text-primary">
                     {state.selectedItem?.label}
                   </p>
                   {state.selectedItem?.supportingText && (
-                    <p className="tt-md text-tertiary">
+                    <p className="text-md text-tertiary">
                       {state.selectedItem?.supportingText}
                     </p>
                   )}
@@ -115,7 +115,7 @@ const SelectValue = (props: SelectValueProps) => {
               ) : (
                 <p
                   className={cx(
-                    "tt-md text-placeholder",
+                    "text-md text-placeholder",
                     props.isDisabled && "text-disabled",
                   )}
                 >

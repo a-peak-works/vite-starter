@@ -78,7 +78,9 @@ export const RadioGroupCheckbox = ({
                   <span
                     className={cx(
                       "text-secondary",
-                      size === "md" ? "tt-md-md" : "tt-sm-md",
+                      size === "md"
+                        ? "text-md font-medium"
+                        : "text-sm font-medium",
                     )}
                   >
                     {plan.title}
@@ -86,7 +88,7 @@ export const RadioGroupCheckbox = ({
                   <span
                     className={cx(
                       "text-tertiary",
-                      size === "md" ? "tt-md" : "tt-sm",
+                      size === "md" ? "text-md" : "text-sm",
                     )}
                   >
                     {plan.secondaryTitle}
@@ -96,7 +98,7 @@ export const RadioGroupCheckbox = ({
                   slot="description"
                   className={cx(
                     "text-tertiary",
-                    size === "md" ? "tt-md" : "tt-sm",
+                    size === "md" ? "text-md" : "text-sm",
                   )}
                 >
                   {plan.description}

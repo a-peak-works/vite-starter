@@ -1,7 +1,7 @@
 import type { FC, ReactNode, Ref } from "react";
 import { isValidElement } from "react";
 import { cx, sortCx } from "@/components/utils/cx";
-import { isReactComponent } from "@/components/utils/isReactComponent";
+import { isReactComponent } from "@/components/utils/is-react-component";
 
 const iconsSizes = {
   sm: "size-4",

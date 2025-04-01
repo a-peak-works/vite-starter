@@ -2,7 +2,7 @@ import type { FC, ReactNode } from "react";
 import { isValidElement } from "react";
 import { ArrowRight } from "@untitledui/icons";
 import { cx, sortCx } from "@/components/utils/cx";
-import { isReactComponent } from "@/components/utils/isReactComponent";
+import { isReactComponent } from "@/components/utils/is-react-component";
 
 type Size = "md" | "lg";
 type Color = "brand" | "warning" | "error" | "gray" | "success";
@@ -35,7 +35,7 @@ const getSizeClasses = (
 > => ({
   leading: {
     md: {
-      root: cx("py-1 pr-2 pl-1 tt-xs-md", !text && !icon && "pr-1"),
+      root: cx("py-1 pr-2 pl-1 text-xs font-medium", !text && !icon && "pr-1"),
       addon: cx(
         "px-2 py-0.5",
         theme === "modern" && "gap-1 px-1.5",
@@ -44,7 +44,7 @@ const getSizeClasses = (
       icon: "ml-1 size-4",
     },
     lg: {
-      root: cx("py-1 pr-2 pl-1 tt-sm-md", !text && !icon && "pr-1"),
+      root: cx("py-1 pr-2 pl-1 text-sm font-medium", !text && !icon && "pr-1"),
       addon: cx(
         "px-2.5 py-0.5",
         theme === "modern" && "gap-1.5 px-2",
@@ -55,7 +55,10 @@ const getSizeClasses = (
   },
   trailing: {
     md: {
-      root: cx("py-1 pr-1 pl-3 tt-xs-md", theme === "modern" && "pl-2.5"),
+      root: cx(
+        "py-1 pr-1 pl-3 text-xs font-medium",
+        theme === "modern" && "pl-2.5",
+      ),
       addon: cx(
         "py-0.5 pr-1.5 pl-2",
         theme === "modern" && "pr-1.5 pl-2",
@@ -65,7 +68,7 @@ const getSizeClasses = (
       dot: "mr-1.5",
     },
     lg: {
-      root: "py-1 pr-1 pl-3 tt-sm-md",
+      root: "py-1 pr-1 pl-3 text-sm font-medium",
       addon: cx(
         "py-0.5 pr-2 pl-2.5",
         theme === "modern" && "pr-1.5 pl-2",

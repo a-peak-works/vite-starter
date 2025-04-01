@@ -30,7 +30,7 @@ export const NativeSelect = (props: {
           onChange={props.onChange}
           aria-describedby={hintId}
           aria-labelledby={selectId}
-          className="appearance-none rounded-lg bg-primary px-3.5 py-2.5 tt-md-md text-primary shadow-xs ring-1 ring-border-primary outline-hidden transition duration-200 ease-in-out ring-inset placeholder:text-fg-quaternary focus:ring-2 focus:ring-border-brand disabled:cursor-not-allowed disabled:bg-disabled_subtle disabled:text-disabled"
+          className="appearance-none rounded-lg bg-primary px-3.5 py-2.5 text-md font-medium text-primary shadow-xs ring-1 ring-border-primary outline-hidden transition duration-200 ease-in-out ring-inset placeholder:text-fg-quaternary focus:ring-2 focus:ring-border-brand disabled:cursor-not-allowed disabled:bg-disabled_subtle disabled:text-disabled"
         >
           <option value="default" disabled defaultChecked>
             Select team member

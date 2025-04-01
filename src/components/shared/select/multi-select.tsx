@@ -325,7 +325,7 @@ const InnerComboBox = ({
           >
             <Avatar size="xxs" alt={value?.label} src={value?.avatarUrl} />
 
-            <p className="ml-[5px] truncate tt-sm-md whitespace-nowrap text-secondary select-none">
+            <p className="ml-[5px] truncate text-sm font-medium whitespace-nowrap text-secondary select-none">
               {value?.label}
             </p>
 
@@ -350,7 +350,7 @@ const InnerComboBox = ({
         <AriaInput
           placeholder={placeholder}
           onKeyDown={handleInputKeyDown}
-          className="w-full flex-[1_0_0] appearance-none bg-transparent tt-md text-ellipsis text-primary caret-alpha-black/90 placeholder:text-placeholder focus:outline-hidden disabled:cursor-not-allowed disabled:text-disabled disabled:placeholder:text-disabled"
+          className="w-full flex-[1_0_0] appearance-none bg-transparent text-md text-ellipsis text-primary caret-alpha-black/90 placeholder:text-placeholder focus:outline-hidden disabled:cursor-not-allowed disabled:text-disabled disabled:placeholder:text-disabled"
         />
 
         {shortcut && (
@@ -363,7 +363,7 @@ const InnerComboBox = ({
           >
             <span
               className={cx(
-                "pointer-events-none rounded px-1 py-px tt-xs-md text-quaternary ring-1 ring-border-secondary select-none ring-inset",
+                "pointer-events-none rounded px-1 py-px text-xs font-medium text-quaternary ring-1 ring-border-secondary select-none ring-inset",
                 isDisabled && "bg-transparent text-disabled",
               )}
             >

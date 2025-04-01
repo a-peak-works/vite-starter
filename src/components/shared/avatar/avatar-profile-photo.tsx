@@ -8,7 +8,7 @@ const styles = {
   sm: {
     root: "size-18",
     icon: "size-9",
-    initials: "td-sm-semi",
+    initials: "text-display-sm font-semibold",
     ring: "ring-3 shadow-md",
     status: "bottom-0.5 right-0.5",
     tick: "bottom-0 right-0",
@@ -16,7 +16,7 @@ const styles = {
   md: {
     root: "size-24",
     icon: "size-12",
-    initials: "td-md-semi",
+    initials: "text-display-md font-semibold",
     ring: "ring-4 shadow-lg",
     status: "bottom-1 right-1",
     tick: "bottom-0.5 right-0.5",
@@ -24,7 +24,7 @@ const styles = {
   lg: {
     root: "size-40",
     icon: "size-20",
-    initials: "td-xl-semi",
+    initials: "text-display-xl font-semibold",
     ring: "ring-4 shadow-lg",
     status: "bottom-3 right-3",
     tick: "bottom-1 right-1",

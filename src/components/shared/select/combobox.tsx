@@ -98,7 +98,7 @@ const ComboBoxValue = ({
           >
             <p
               className={cx(
-                "tt-md-md text-primary",
+                "text-md font-medium text-primary",
                 isDisabled && "text-disabled",
               )}
             >
@@ -107,7 +107,7 @@ const ComboBoxValue = ({
             {last && (
               <p
                 className={cx(
-                  "-ml-[3px] tt-md text-tertiary",
+                  "-ml-[3px] text-md text-tertiary",
                   isDisabled && "text-disabled",
                 )}
               >
@@ -118,7 +118,7 @@ const ComboBoxValue = ({
         )}
         <AriaInput
           placeholder={placeholder}
-          className="z-10 w-full appearance-none bg-transparent tt-md text-transparent caret-alpha-black/90 placeholder:text-placeholder focus:outline-hidden disabled:cursor-not-allowed disabled:text-disabled disabled:placeholder:text-disabled"
+          className="z-10 w-full appearance-none bg-transparent text-md text-transparent caret-alpha-black/90 placeholder:text-placeholder focus:outline-hidden disabled:cursor-not-allowed disabled:text-disabled disabled:placeholder:text-disabled"
         />
       </div>
 
@@ -132,7 +132,7 @@ const ComboBoxValue = ({
         >
           <span
             className={cx(
-              "pointer-events-none rounded px-1 py-px tt-xs-md text-quaternary ring-1 ring-border-secondary select-none ring-inset",
+              "pointer-events-none rounded px-1 py-px text-xs font-medium text-quaternary ring-1 ring-border-secondary select-none ring-inset",
               isDisabled && "bg-transparent text-disabled",
             )}
             aria-hidden="true"

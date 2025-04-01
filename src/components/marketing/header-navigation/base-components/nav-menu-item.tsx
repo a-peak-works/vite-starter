@@ -1,6 +1,6 @@
 import { type FC, type ReactNode, isValidElement } from "react";
 import { cx } from "@/components/utils/cx";
-import { isReactComponent } from "@/components/utils/isReactComponent";
+import { isReactComponent } from "@/components/utils/is-react-component";
 
 interface NavMenuItemLinkProps {
   href: string;
@@ -43,12 +43,12 @@ export const NavMenuItemLink = ({
     <div className="flex flex-col gap-3">
       <div className="flex flex-col gap-0.5">
         <div className="flex items-center gap-2">
-          <span className="tt-md-semi text-primary">{title}</span>
+          <span className="text-md font-semibold text-primary">{title}</span>
           {badge}
         </div>
 
         {subtitle && (
-          <span className="line-clamp-2 tt-sm text-tertiary">{subtitle}</span>
+          <span className="line-clamp-2 text-sm text-tertiary">{subtitle}</span>
         )}
       </div>
       {actionsContent}

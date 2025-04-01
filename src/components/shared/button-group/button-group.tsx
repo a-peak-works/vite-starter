@@ -14,7 +14,7 @@ import {
   type ToggleButtonProps,
 } from "react-aria-components";
 import { cx, sortCx } from "@/components/utils/cx";
-import { isReactComponent } from "@/components/utils/isReactComponent";
+import { isReactComponent } from "@/components/utils/is-react-component";
 
 export const styles = sortCx({
   common: {
@@ -32,15 +32,15 @@ export const styles = sortCx({
 
   sizes: {
     sm: {
-      root: "gap-1.5 px-3.5 py-2 text-sm leading-sm not-last:pr-[calc(calc(var(--spacing)*3.5)+1px)] first:rounded-l-lg last:rounded-r-lg data-icon-leading:pl-3 data-icon-only:p-2",
+      root: "gap-1.5 px-3.5 py-2 text-sm not-last:pr-[calc(calc(var(--spacing)*3.5)+1px)] first:rounded-l-lg last:rounded-r-lg data-icon-leading:pl-3 data-icon-only:p-2",
       icon: "size-5",
     },
     md: {
-      root: "gap-2 px-4 py-2.5 text-sm leading-sm not-last:pr-[calc(calc(var(--spacing)*4)+1px)] first:rounded-l-lg last:rounded-r-lg data-icon-leading:pl-3.5 data-icon-only:px-3",
+      root: "gap-2 px-4 py-2.5 text-sm not-last:pr-[calc(calc(var(--spacing)*4)+1px)] first:rounded-l-lg last:rounded-r-lg data-icon-leading:pl-3.5 data-icon-only:px-3",
       icon: "size-5",
     },
     lg: {
-      root: "gap-2 px-4.5 py-2.5 text-md leading-md not-last:pr-[calc(calc(var(--spacing)*4.5)+1px)] first:rounded-l-lg last:rounded-r-lg data-icon-leading:pl-4 data-icon-only:p-3",
+      root: "gap-2 px-4.5 py-2.5 text-md not-last:pr-[calc(calc(var(--spacing)*4.5)+1px)] first:rounded-l-lg last:rounded-r-lg data-icon-leading:pl-4 data-icon-only:p-3",
       icon: "size-5",
     },
   },

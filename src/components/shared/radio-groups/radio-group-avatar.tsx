@@ -80,7 +80,9 @@ export const RadioGroupAvatar = ({
                     <span
                       className={cx(
                         "text-secondary",
-                        size === "md" ? "tt-md-md" : "tt-sm-md",
+                        size === "md"
+                          ? "text-md font-medium"
+                          : "text-sm font-medium",
                       )}
                     >
                       {person.name}
@@ -88,7 +90,7 @@ export const RadioGroupAvatar = ({
                     <span
                       className={cx(
                         "text-tertiary",
-                        size === "md" ? "tt-md" : "tt-sm",
+                        size === "md" ? "text-md" : "text-sm",
                       )}
                     >
                       {person.username}
@@ -98,7 +100,7 @@ export const RadioGroupAvatar = ({
                     slot="description"
                     className={cx(
                       "text-tertiary",
-                      size === "md" ? "tt-md" : "tt-sm",
+                      size === "md" ? "text-md" : "text-sm",
                     )}
                   >
                     {person.title}

@@ -118,10 +118,10 @@ export const Tooltip = ({
             description ? "py-3" : "py-2",
           )}
         >
-          <span className="tt-xs-semi text-white">{title}</span>
+          <span className="text-xs font-semibold text-white">{title}</span>
 
           {description && (
-            <span className="tt-xs-md text-tooltip-supporting-text">
+            <span className="text-xs font-medium text-tooltip-supporting-text">
               {description}
             </span>
           )}

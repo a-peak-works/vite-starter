@@ -54,37 +54,37 @@ export interface AvatarProps {
 const styles = {
   xxs: {
     root: "size-4 outline-[0.5px] -outline-offset-[0.5px]",
-    initials: "tt-xs-semi",
+    initials: "text-xs font-semibold",
     icon: "size-3",
   },
   xs: {
     root: "size-6 outline-[0.5px] -outline-offset-[0.5px]",
-    initials: "tt-xs-semi",
+    initials: "text-xs font-semibold",
     icon: "size-4",
   },
   sm: {
     root: "size-8 outline-[0.5px] -outline-offset-[0.5px]",
-    initials: "tt-sm-semi",
+    initials: "text-sm font-semibold",
     icon: "size-5",
   },
   md: {
     root: "size-10 outline-[0.75px] -outline-offset-[0.75px]",
-    initials: "tt-md-semi",
+    initials: "text-md font-semibold",
     icon: "size-6",
   },
   lg: {
     root: "size-12 outline-[0.75px] -outline-offset-[0.75px]",
-    initials: "tt-lg-semi",
+    initials: "text-lg font-semibold",
     icon: "size-7",
   },
   xl: {
     root: "size-14 outline-[0.75px] -outline-offset-[0.75px]",
-    initials: "tt-xl-semi",
+    initials: "text-xl font-semibold",
     icon: "size-8",
   },
   "2xl": {
     root: "size-16 outline-[0.75px] -outline-offset-[0.75px]",
-    initials: "td-xs-semi",
+    initials: "text-display-xs font-semibold",
     icon: "size-8",
   },
 };

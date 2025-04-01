@@ -21,7 +21,7 @@
     /* Base */
     color: var(--tw-prose-body);
     font-size: var(--text-md);
-    line-height: var(--leading-md);
+    line-height: var(--text-md--line-height);
 }
 
 .prose :not(:where([class~="not-prose"], [class~="not-prose"] *)) {
@@ -33,7 +33,7 @@
 
     &:where([class~="lead"]) {
         font-size: var(--text-md);
-        line-height: var(--leading-md);
+        line-height: var(--text-md--line-height);
         margin-top: 1.2em;
         margin-bottom: 1.2em;
     }
@@ -91,7 +91,7 @@
         font-style: italic;
 
         font-size: var(--text-xl);
-        line-height: var(--leading-xl);
+        line-height: var(--text-xl--line-height);
     }
     &:where(blockquote p:first-of-type::before) {
         content: open-quote;
@@ -106,7 +106,7 @@
         font-weight: 600;
 
         font-size: var(--text-display-sm);
-        line-height: var(--leading-display-sm);
+        line-height: var(--text-display-sm--line-height);
         margin-bottom: calc(var(--spacing) * 5);
         margin-top: calc(var(--spacing) * 10);
     }
@@ -115,7 +115,7 @@
         font-weight: 600;
 
         font-size: var(--text-display-xs);
-        line-height: var(--leading-display-xs);
+        line-height: var(--text-display-xs--line-height);
         margin-bottom: calc(var(--spacing) * 4);
         margin-top: calc(var(--spacing) * 8);
     }
@@ -124,7 +124,7 @@
         font-weight: 600;
 
         font-size: var(--text-xl);
-        line-height: var(--leading-xl);
+        line-height: var(--text-xl--line-height);
         margin-bottom: calc(var(--spacing) * 3);
         margin-top: calc(var(--spacing) * 8);
     }
@@ -133,7 +133,7 @@
         font-weight: 600;
 
         font-size: var(--text-lg);
-        line-height: var(--leading-lg);
+        line-height: var(--text-lg--line-height);
         margin-bottom: calc(var(--spacing) * 2);
         margin-top: calc(var(--spacing) * 5);
     }
@@ -208,7 +208,7 @@
         color: var(--tw-prose-captions);
 
         font-size: var(--text-sm);
-        line-height: var(--leading-sm);
+        line-height: var(--text-sm--line-height);
         margin-top: calc(var(--spacing) * 3);
     }
     &:where(cite) {
@@ -279,7 +279,7 @@
     @media (width >= 48rem /* 768px */) {
         /* Base */
         font-size: var(--text-lg);
-        line-height: var(--leading-lg);
+        line-height: var(--text-lg--line-height);
     }
 }
 
@@ -293,7 +293,7 @@
 
         &:where([class~="lead"]) {
             font-size: var(--text-xl);
-            line-height: var(--leading-xl);
+            line-height: var(--text-xl--line-height);
             margin-top: 1.09em;
             margin-bottom: 1.09em;
         }
@@ -337,31 +337,31 @@
             margin: 0;
 
             font-size: var(--text-display-xs);
-            line-height: var(--leading-display-xs);
+            line-height: var(--text-display-xs--line-height);
         }
 
         /* Headings */
         &:where(h1) {
             font-size: var(--text-display-md);
-            line-height: var(--leading-display-md);
+            line-height: var(--text-display-md--line-height);
             margin-bottom: calc(var(--spacing) * 6);
             margin-top: calc(var(--spacing) * 12);
         }
         &:where(h2) {
             font-size: var(--text-display-sm);
-            line-height: var(--leading-display-sm);
+            line-height: var(--text-display-sm--line-height);
             margin-bottom: calc(var(--spacing) * 5);
             margin-top: calc(var(--spacing) * 10);
         }
         &:where(h3) {
             font-size: var(--text-display-xs);
-            line-height: var(--leading-display-xs);
+            line-height: var(--text-display-xs--line-height);
             margin-bottom: calc(var(--spacing) * 4);
             margin-top: calc(var(--spacing) * 8);
         }
         &:where(h4) {
             font-size: var(--text-xl);
-            line-height: var(--leading-xl);
+            line-height: var(--text-xl--line-height);
             margin-bottom: calc(var(--spacing) * 3);
             margin-top: calc(var(--spacing) * 8);
         }
@@ -388,7 +388,7 @@
         }
         &:where(figure > blockquote + figcaption) {
             font-size: var(--text-md);
-            line-height: var(--leading-md);
+            line-height: var(--text-md--line-height);
         }
 
         &:where(figcaption) {

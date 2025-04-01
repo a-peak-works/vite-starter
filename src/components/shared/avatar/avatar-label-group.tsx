@@ -3,10 +3,10 @@ import { cx } from "@/components/utils/cx";
 import { Avatar, type AvatarProps } from "./avatar";
 
 const styles = {
-  sm: { root: "gap-2", title: "tt-sm-semi", subtitle: "tt-xs" },
-  md: { root: "gap-2", title: "tt-sm-semi", subtitle: "tt-sm" },
-  lg: { root: "gap-3", title: "tt-md-semi", subtitle: "tt-md" },
-  xl: { root: "gap-4", title: "tt-lg-semi", subtitle: "tt-md" },
+  sm: { root: "gap-2", title: "text-sm font-semibold", subtitle: "text-xs" },
+  md: { root: "gap-2", title: "text-sm font-semibold", subtitle: "text-sm" },
+  lg: { root: "gap-3", title: "text-md font-semibold", subtitle: "text-md" },
+  xl: { root: "gap-4", title: "text-lg font-semibold", subtitle: "text-md" },
 };
 
 interface AvatarLabelGroupProps extends AvatarProps {
@@ -15,7 +15,7 @@ interface AvatarLabelGroupProps extends AvatarProps {
   subtitle: string | ReactNode;
 }
 
-const AvatarLabelGroup = ({
+export const AvatarLabelGroup = ({
   title,
   subtitle,
   className,
@@ -41,5 +41,3 @@ const AvatarLabelGroup = ({
     </div>
   );
 };
-
-export default AvatarLabelGroup;

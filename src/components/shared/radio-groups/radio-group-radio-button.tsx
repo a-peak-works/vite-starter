@@ -85,8 +85,10 @@ export const RadioGroupRadioButton = ({
                 >
                   <span
                     className={cx(
-                      "tt-sm-md text-secondary",
-                      size === "md" ? "tt-md-md" : "tt-sm-md",
+                      "text-sm font-medium text-secondary",
+                      size === "md"
+                        ? "text-md font-medium"
+                        : "text-sm font-medium",
                     )}
                   >
                     {plan.title}
@@ -94,7 +96,7 @@ export const RadioGroupRadioButton = ({
                   <span
                     className={cx(
                       "text-tertiary",
-                      size === "md" ? "tt-md" : "tt-sm",
+                      size === "md" ? "text-md" : "text-sm",
                     )}
                   >
                     {plan.secondaryTitle}
@@ -103,8 +105,8 @@ export const RadioGroupRadioButton = ({
                 <Text
                   slot="description"
                   className={cx(
-                    "tt-sm text-tertiary",
-                    size === "md" ? "tt-md" : "tt-sm",
+                    "text-sm text-tertiary",
+                    size === "md" ? "text-md" : "text-sm",
                   )}
                 >
                   {plan.description}

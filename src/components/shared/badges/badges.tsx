@@ -158,24 +158,24 @@ export const Badge = <T extends BadgeTypes>(props: BadgeProps<T>) => {
 
   const pillSizes = {
     sm: {
-      root: "py-0.5 px-2 tt-xs-md",
+      root: "py-0.5 px-2 text-xs font-medium",
     },
     md: {
-      root: "py-0.5 px-2.5 tt-sm-md",
+      root: "py-0.5 px-2.5 text-sm font-medium",
     },
     lg: {
-      root: "py-1 px-3 tt-sm-md",
+      root: "py-1 px-3 text-sm font-medium",
     },
   };
   const badgeSizes = {
     sm: {
-      root: "py-0.5 px-1.5 tt-xs-md",
+      root: "py-0.5 px-1.5 text-xs font-medium",
     },
     md: {
-      root: "py-0.5 px-2 tt-sm-md",
+      root: "py-0.5 px-2 text-sm font-medium",
     },
     lg: {
-      root: "py-1 px-2.5 tt-sm-md rounded-lg",
+      root: "py-1 px-2.5 text-sm font-medium rounded-lg",
     },
   };
 
@@ -222,24 +222,24 @@ export const BadgeWithDot = <T extends BadgeTypes>(
 
   const pillSizes = {
     sm: {
-      root: "gap-1 py-0.5 pl-1.5 pr-2 tt-xs-md",
+      root: "gap-1 py-0.5 pl-1.5 pr-2 text-xs font-medium",
     },
     md: {
-      root: "gap-1.5 py-0.5 pl-2 pr-2.5 tt-sm-md",
+      root: "gap-1.5 py-0.5 pl-2 pr-2.5 text-sm font-medium",
     },
     lg: {
-      root: "gap-1.5 py-1 pl-2.5 pr-3 tt-sm-md",
+      root: "gap-1.5 py-1 pl-2.5 pr-3 text-sm font-medium",
     },
   };
   const badgeSizes = {
     sm: {
-      root: "gap-1 py-0.5 px-1.5 tt-xs-md",
+      root: "gap-1 py-0.5 px-1.5 text-xs font-medium",
     },
     md: {
-      root: "gap-1.5 py-0.5 px-2 tt-sm-md",
+      root: "gap-1.5 py-0.5 px-2 text-sm font-medium",
     },
     lg: {
-      root: "gap-1.5 py-1 px-2.5 tt-sm-md rounded-lg",
+      root: "gap-1.5 py-1 px-2.5 text-sm font-medium rounded-lg",
     },
   };
 
@@ -293,30 +293,30 @@ export const BadgeWithIcon = <T extends BadgeTypes>(
 
   const pillSizes = {
     sm: {
-      trailing: "gap-0.5 py-0.5 pl-2 pr-1.5 tt-xs-md",
-      leading: "gap-0.5 py-0.5 pr-2 pl-1.5 tt-xs-md",
+      trailing: "gap-0.5 py-0.5 pl-2 pr-1.5 text-xs font-medium",
+      leading: "gap-0.5 py-0.5 pr-2 pl-1.5 text-xs font-medium",
     },
     md: {
-      trailing: "gap-1 py-0.5 pl-2.5 pr-2 tt-sm-md",
-      leading: "gap-1 py-0.5 pr-2.5 pl-2 tt-sm-md",
+      trailing: "gap-1 py-0.5 pl-2.5 pr-2 text-sm font-medium",
+      leading: "gap-1 py-0.5 pr-2.5 pl-2 text-sm font-medium",
     },
     lg: {
-      trailing: "gap-1 py-1 pl-3 pr-2.5 tt-sm-md",
-      leading: "gap-1 py-1 pr-3 pl-2.5 tt-sm-md",
+      trailing: "gap-1 py-1 pl-3 pr-2.5 text-sm font-medium",
+      leading: "gap-1 py-1 pr-3 pl-2.5 text-sm font-medium",
     },
   };
   const badgeSizes = {
     sm: {
-      trailing: "gap-0.5 py-0.5 pl-2 pr-1.5 tt-xs-md",
-      leading: "gap-0.5 py-0.5 pr-2 pl-1.5 tt-xs-md",
+      trailing: "gap-0.5 py-0.5 pl-2 pr-1.5 text-xs font-medium",
+      leading: "gap-0.5 py-0.5 pr-2 pl-1.5 text-xs font-medium",
     },
     md: {
-      trailing: "gap-1 py-0.5 pl-2 pr-1.5 tt-sm-md",
-      leading: "gap-1 py-0.5 pr-2 pl-1.5 tt-sm-md",
+      trailing: "gap-1 py-0.5 pl-2 pr-1.5 text-sm font-medium",
+      leading: "gap-1 py-0.5 pr-2 pl-1.5 text-sm font-medium",
     },
     lg: {
-      trailing: "gap-1 py-1 pl-2.5 pr-2 tt-sm-md rounded-lg",
-      leading: "gap-1 py-1 pr-2.5 pl-2 tt-sm-md rounded-lg",
+      trailing: "gap-1 py-1 pl-2.5 pr-2 text-sm font-medium rounded-lg",
+      leading: "gap-1 py-1 pr-2.5 pl-2 text-sm font-medium rounded-lg",
     },
   };
 
@@ -375,24 +375,24 @@ export const BadgeWithFlag = <T extends BadgeTypes>(
 
   const pillSizes = {
     sm: {
-      root: "gap-1 py-0.5 pl-[3px] pr-2 tt-xs-md",
+      root: "gap-1 py-0.5 pl-[3px] pr-2 text-xs font-medium",
     },
     md: {
-      root: "gap-1.5 py-0.5 pl-1 pr-2.5 tt-sm-md",
+      root: "gap-1.5 py-0.5 pl-1 pr-2.5 text-sm font-medium",
     },
     lg: {
-      root: "gap-1.5 py-1 pl-1.5 pr-3 tt-sm-md",
+      root: "gap-1.5 py-1 pl-1.5 pr-3 text-sm font-medium",
     },
   };
   const badgeSizes = {
     sm: {
-      root: "gap-1 py-0.5 pl-1 pr-1.5 tt-xs-md",
+      root: "gap-1 py-0.5 pl-1 pr-1.5 text-xs font-medium",
     },
     md: {
-      root: "gap-1.5 py-0.5 pl-1.5 pr-2 tt-sm-md",
+      root: "gap-1.5 py-0.5 pl-1.5 pr-2 text-sm font-medium",
     },
     lg: {
-      root: "gap-1.5 py-1 pl-2 pr-2.5 tt-sm-md rounded-lg",
+      root: "gap-1.5 py-1 pl-2 pr-2.5 text-sm font-medium rounded-lg",
     },
   };
 
@@ -442,24 +442,24 @@ export const BadgeWithImage = <T extends BadgeTypes>(
 
   const pillSizes = {
     sm: {
-      root: "gap-1 py-0.5 pl-[3px] pr-2 tt-xs-md",
+      root: "gap-1 py-0.5 pl-[3px] pr-2 text-xs font-medium",
     },
     md: {
-      root: "gap-1.5 py-0.5 pl-1 pr-2.5 tt-sm-md",
+      root: "gap-1.5 py-0.5 pl-1 pr-2.5 text-sm font-medium",
     },
     lg: {
-      root: "gap-1.5 py-1 pl-1.5 pr-3 tt-sm-md",
+      root: "gap-1.5 py-1 pl-1.5 pr-3 text-sm font-medium",
     },
   };
   const badgeSizes = {
     sm: {
-      root: "gap-1 py-0.5 pl-1 pr-1.5 tt-xs-md",
+      root: "gap-1 py-0.5 pl-1 pr-1.5 text-xs font-medium",
     },
     md: {
-      root: "gap-1.5 py-0.5 pl-1.5 pr-2 tt-sm-md",
+      root: "gap-1.5 py-0.5 pl-1.5 pr-2 text-sm font-medium",
     },
     lg: {
-      root: "gap-1.5 py-1 pl-2 pr-2.5 tt-sm-md rounded-lg",
+      root: "gap-1.5 py-1 pl-2 pr-2.5 text-sm font-medium rounded-lg",
     },
   };
 
@@ -507,24 +507,24 @@ export const BadgeWithButton = <T extends BadgeTypes>(
 
   const pillSizes = {
     sm: {
-      root: "gap-0.5 py-0.5 pl-2 pr-[3px] tt-xs-md",
+      root: "gap-0.5 py-0.5 pl-2 pr-[3px] text-xs font-medium",
     },
     md: {
-      root: "gap-0.5 py-0.5 pl-2.5 pr-1 tt-sm-md",
+      root: "gap-0.5 py-0.5 pl-2.5 pr-1 text-sm font-medium",
     },
     lg: {
-      root: "gap-0.5 py-1 pl-3 pr-1.5 tt-sm-md",
+      root: "gap-0.5 py-1 pl-3 pr-1.5 text-sm font-medium",
     },
   };
   const badgeSizes = {
     sm: {
-      root: "gap-0.5 py-0.5 pl-1.5 pr-[3px] tt-xs-md",
+      root: "gap-0.5 py-0.5 pl-1.5 pr-[3px] text-xs font-medium",
     },
     md: {
-      root: "gap-0.5 py-0.5 pl-2 pr-1 tt-sm-md",
+      root: "gap-0.5 py-0.5 pl-2 pr-1 text-sm font-medium",
     },
     lg: {
-      root: "gap-0.5 py-1 pl-2.5 pr-1.5 tt-sm-md rounded-lg",
+      root: "gap-0.5 py-1 pl-2.5 pr-1.5 text-sm font-medium rounded-lg",
     },
   };
 

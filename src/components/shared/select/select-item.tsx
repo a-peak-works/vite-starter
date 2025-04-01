@@ -73,7 +73,7 @@ export const SelectItem = ({
             <Text
               slot="label"
               className={cx(
-                "truncate tt-md-md whitespace-nowrap text-primary",
+                "truncate text-md font-medium whitespace-nowrap text-primary",
                 state.isDisabled && "text-disabled",
               )}
             >
@@ -85,7 +85,7 @@ export const SelectItem = ({
               <Text
                 slot="description"
                 className={cx(
-                  "tt-md whitespace-nowrap text-tertiary",
+                  "text-md whitespace-nowrap text-tertiary",
                   state.isDisabled && "text-disabled",
                 )}
               >

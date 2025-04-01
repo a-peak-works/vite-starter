@@ -51,7 +51,7 @@ export const DropdownMenuSimple = () => {
       <nav className="overflow-hidden rounded-2xl bg-primary py-2 shadow-xs ring-1 ring-border-secondary_alt md:p-2 md:shadow-lg">
         <ul className="flex flex-col gap-0.5">
           {items.map(({ title, subtitle, href, Icon }) => (
-            <li key={href}>
+            <li key={title}>
               <NavMenuItemLink
                 icon={Icon}
                 title={title}

@@ -27,7 +27,7 @@ export const InputPrefix = ({
     <div
       {...props}
       className={cx(
-        "flex tt-md text-tertiary shadow-xs ring-1 ring-border-primary ring-inset",
+        "flex text-md text-tertiary shadow-xs ring-1 ring-border-primary ring-inset",
         styles[size],
         position === "leading" && "-mr-px rounded-l-lg",
         position === "trailing" && "-ml-px rounded-r-lg",

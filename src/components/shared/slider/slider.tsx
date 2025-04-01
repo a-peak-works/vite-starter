@@ -11,9 +11,9 @@ import { cx, sortCx } from "@/components/utils/cx";
 const styles = sortCx({
   default: "hidden",
   bottom:
-    "absolute top-2 left-1/2 -translate-x-1/2 translate-y-full text-md leading-md font-medium text-primary",
+    "absolute top-2 left-1/2 -translate-x-1/2 translate-y-full text-md font-medium text-primary",
   "top-floating":
-    "absolute -top-2 left-1/2 -translate-x-1/2 -translate-y-full rounded-lg bg-primary px-3 py-2 text-xs leading-xs font-semibold text-secondary shadow-lg ring-1 ring-border-secondary_alt",
+    "absolute -top-2 left-1/2 -translate-x-1/2 -translate-y-full rounded-lg bg-primary px-3 py-2 text-xs font-semibold text-secondary shadow-lg ring-1 ring-border-secondary_alt",
 });
 
 interface SliderProps extends AriaSliderProps {

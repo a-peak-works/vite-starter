@@ -12,7 +12,7 @@ import type {
 } from "react-aria-components";
 import { Button as AriaButton } from "react-aria-components";
 import { cx, sortCx } from "@/components/utils/cx";
-import { isReactComponent } from "@/components/utils/isReactComponent";
+import { isReactComponent } from "@/components/utils/is-react-component";
 
 export const styles = sortCx({
   common: {
@@ -28,27 +28,27 @@ export const styles = sortCx({
 
   sizes: {
     sm: {
-      root: "gap-1 rounded-lg px-3 py-2 tt-sm-semi before:rounded-[7px] data-icon-only:p-2",
+      root: "gap-1 rounded-lg px-3 py-2 text-sm font-semibold before:rounded-[7px] data-icon-only:p-2",
       linkRoot: "gap-1",
       icon: "size-5",
     },
     md: {
-      root: "gap-1 rounded-lg px-3.5 py-2.5 tt-sm-semi before:rounded-[7px] data-icon-only:p-2.5",
+      root: "gap-1 rounded-lg px-3.5 py-2.5 text-sm font-semibold before:rounded-[7px] data-icon-only:p-2.5",
       linkRoot: "gap-1",
       icon: "size-5",
     },
     lg: {
-      root: "gap-1.5 rounded-lg px-4 py-2.5 tt-md-semi before:rounded-[7px] data-icon-only:p-3",
+      root: "gap-1.5 rounded-lg px-4 py-2.5 text-md font-semibold before:rounded-[7px] data-icon-only:p-3",
       linkRoot: "gap-1.5",
       icon: "size-5",
     },
     xl: {
-      root: "gap-1.5 rounded-lg px-4.5 py-3 tt-md-semi before:rounded-[7px] data-icon-only:p-3.5",
+      root: "gap-1.5 rounded-lg px-4.5 py-3 text-md font-semibold before:rounded-[7px] data-icon-only:p-3.5",
       linkRoot: "gap-1.5",
       icon: "size-5",
     },
     "2xl": {
-      root: "gap-2 rounded-[10px] px-5.5 py-4 tt-lg-semi before:rounded-[9px] data-icon-only:p-4",
+      root: "gap-2 rounded-[10px] px-5.5 py-4 text-lg font-semibold before:rounded-[9px] data-icon-only:p-4",
       linkRoot: "gap-2",
       icon: "size-6",
     },

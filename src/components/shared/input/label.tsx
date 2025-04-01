@@ -29,7 +29,7 @@ const Label = ({
       data-label="true"
       {...props}
       className={cx(
-        "flex w-full cursor-default items-center gap-0.5 tt-sm-md text-secondary",
+        "flex w-full cursor-default items-center gap-0.5 text-sm font-medium text-secondary",
         className,
       )}
     >
