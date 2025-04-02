@@ -29,7 +29,7 @@ const styles = sortCx({
   },
 
   gradient: {
-    base: "rounded-full text-fg-white before:absolute before:inset-0 before:size-full before:rounded-full before:border before:mask-image-b after:absolute after:block after:rounded-full",
+    base: "before:mask-b-from-0% rounded-full text-fg-white before:absolute before:inset-0 before:size-full before:rounded-full before:border after:absolute after:block after:rounded-full",
     sizes: {
       sm: "size-8 after:size-6",
       md: "size-10 after:size-7",
@@ -50,7 +50,7 @@ const styles = sortCx({
   },
 
   dark: {
-    base: "text-fg-white shadow-xs-skeumorphic before:absolute before:inset-px before:border before:border-white/12 before:mask-image-b",
+    base: "before:mask-b-from-0% text-fg-white shadow-xs-skeumorphic before:absolute before:inset-px before:border before:border-white/12",
     sizes: {
       sm: "size-8 rounded-md before:rounded-[5px]",
       md: "size-10 rounded-lg before:rounded-[7px]",
