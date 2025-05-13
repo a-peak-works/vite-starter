@@ -1,8 +1,8 @@
 import { lazy } from "react";
 import { BookOpen01, Check, Copy01, Cube01, HelpCircle } from "@untitledui/icons";
-import UntitledLogoMinimal from "@/components/foundations/logo/UntitledLogoMinimal";
+import { UntitledLogoMinimal } from "@/components/foundations/logo/UntitledLogoMinimal";
 import { Button } from "@/components/shared/buttons/button";
-import ButtonUtility from "@/components/shared/buttons/button-utility";
+import { ButtonUtility } from "@/components/shared/buttons/button-utility";
 import { useClipboard } from "@/hooks/use-clipboard";
 
 const Header = lazy(() => import("@/components/marketing/header-navigation/components/header").then((mod) => ({ default: mod.Header })));

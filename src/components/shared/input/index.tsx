@@ -1,6 +1,8 @@
+"use client";
+
 import type { ComponentType, HTMLAttributes, ReactNode, Ref } from "react";
 import { HelpCircle, InfoCircle } from "@untitledui/icons";
-import type { TextFieldProps as AriaTextFieldProps } from "react-aria-components";
+import type { InputProps as AriaInputProps, TextFieldProps as AriaTextFieldProps } from "react-aria-components";
 import { Input as AriaInput, TextField as AriaTextField, Group } from "react-aria-components";
 import HintText from "@/components/shared/input/hint-text";
 import Label from "@/components/shared/input/label";
@@ -8,8 +10,6 @@ import { Tooltip, TooltipTrigger } from "@/components/shared/tooltip/tooltip";
 import { cx, sortCx } from "@/components/utils/cx";
 
 export interface InputBaseProps extends TextFieldProps {
-    label?: string;
-    hint?: ReactNode;
     tooltip?: string;
     size?: "sm" | "md";
     placeholder?: string;
@@ -23,7 +23,22 @@ export interface InputBaseProps extends TextFieldProps {
     icon?: ComponentType<HTMLAttributes<HTMLOrSVGElement>>;
 }
 
-export const InputBase = ({ size = "sm", placeholder, icon: Icon, isDisabled, isInvalid, tooltip, shortcut, ref, groupRef, ...props }: InputBaseProps) => {
+export const InputBase = ({
+    size = "sm",
+    placeholder,
+    icon: Icon,
+    isDisabled,
+    isInvalid,
+    tooltip,
+    shortcut,
+    ref,
+    groupRef,
+    wrapperClassName,
+    tooltipClassName,
+    inputClassName,
+    iconClassName,
+    ...inputProps
+}: InputBaseProps) => {
     // Check if the input has a leading icon or tooltip
     const hasTrailingIcon = tooltip || isInvalid;
     const hasLeadingIcon = Icon;
@@ -65,7 +80,7 @@ export const InputBase = ({ size = "sm", placeholder, icon: Icon, isDisabled, is
                     isInvalid && isFocusWithin && "ring-2 ring-border-error",
                     isFocusWithin && "group-invalid:ring-2 group-invalid:ring-border-error",
 
-                    props.wrapperClassName,
+                    wrapperClassName,
                 )
             }
         >
@@ -76,20 +91,21 @@ export const InputBase = ({ size = "sm", placeholder, icon: Icon, isDisabled, is
                         "pointer-events-none absolute size-5 text-fg-quaternary",
                         isDisabled && "text-fg-disabled",
                         sizes[size].iconLeading,
-                        props.iconClassName,
+                        iconClassName,
                     )}
                 />
             )}
 
             {/* Input field */}
             <AriaInput
+                {...(inputProps as AriaInputProps)}
                 ref={ref}
                 placeholder={placeholder}
                 className={cx(
                     "m-0 w-full bg-transparent text-md text-primary ring-0 outline-hidden placeholder:text-placeholder autofill:rounded-lg autofill:text-primary",
                     isDisabled && "cursor-not-allowed text-disabled",
                     sizes[size].root,
-                    props.inputClassName,
+                    inputClassName,
                 )}
             />
 
@@ -100,7 +116,7 @@ export const InputBase = ({ size = "sm", placeholder, icon: Icon, isDisabled, is
                         className={cx(
                             "absolute cursor-pointer text-fg-quaternary transition duration-200 hover:text-fg-quaternary_hover focus:text-fg-quaternary_hover",
                             sizes[size].iconTrailing,
-                            props.tooltipClassName,
+                            tooltipClassName,
                         )}
                     >
                         <HelpCircle className="size-4" />
@@ -110,7 +126,7 @@ export const InputBase = ({ size = "sm", placeholder, icon: Icon, isDisabled, is
 
             {/* Invalid icon */}
             {isInvalid && (
-                <InfoCircle className={cx("pointer-events-none absolute size-4 text-fg-error-secondary", sizes[size].iconTrailing, props.tooltipClassName)} />
+                <InfoCircle className={cx("pointer-events-none absolute size-4 text-fg-error-secondary", sizes[size].iconTrailing, tooltipClassName)} />
             )}
 
             {/* Shortcut */}
@@ -140,6 +156,8 @@ InputBase.displayName = "InputBase";
 
 interface TextFieldProps extends AriaTextFieldProps {
     ref?: Ref<HTMLDivElement>;
+    label?: string;
+    hint?: ReactNode;
 }
 
 export const TextField = ({ className, ...props }: TextFieldProps) => {
@@ -159,25 +177,35 @@ TextField.displayName = "TextField";
 
 interface InputProps extends InputBaseProps {
     hideRequiredIndicator?: boolean;
+    label?: string;
+    hint?: ReactNode;
 }
 
 export const Input = ({
     size = "sm",
-    placeholder = "olivia@untitledui.com",
+    placeholder,
     icon: Icon,
     label,
     hint,
+    shortcut,
     hideRequiredIndicator,
     className,
     ref,
     groupRef,
+    tooltip,
+    iconClassName,
+    inputClassName,
+    wrapperClassName,
+    tooltipClassName,
     ...props
 }: InputProps) => {
     return (
         <TextField aria-label={!label ? placeholder : undefined} {...props} className={className}>
             {label && <Label isRequired={hideRequiredIndicator ? !hideRequiredIndicator : undefined}>{label}</Label>}
 
-            <InputBase {...props} {...{ ref, groupRef, size, placeholder, icon: Icon }} />
+            <InputBase
+                {...{ ref, groupRef, size, placeholder, icon: Icon, shortcut, iconClassName, inputClassName, wrapperClassName, tooltipClassName, tooltip }}
+            />
 
             {hint && <HintText>{hint}</HintText>}
         </TextField>

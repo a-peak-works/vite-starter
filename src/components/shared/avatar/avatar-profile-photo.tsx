@@ -8,28 +8,25 @@ import { AvatarOnlineIndicator, VerifiedTick } from "./base-components";
 
 const styles = {
     sm: {
-        root: "size-18",
+        root: "size-18 p-[3px]",
+        content: "",
         icon: "size-9",
         initials: "text-display-sm font-semibold",
-        ring: "ring-3 shadow-md",
-        status: "bottom-0.5 right-0.5",
-        tick: "bottom-0 right-0",
+        badge: "bottom-0.5 right-0.5",
     },
     md: {
-        root: "size-24",
+        root: "size-24 p-1",
+        content: "shadow-xl",
         icon: "size-12",
         initials: "text-display-md font-semibold",
-        ring: "ring-4 shadow-lg",
-        status: "bottom-1 right-1",
-        tick: "bottom-0.5 right-0.5",
+        badge: "bottom-1 right-1",
     },
     lg: {
-        root: "size-40",
+        root: "size-40 p-1.5",
+        content: "shadow-2xl",
         icon: "size-20",
         initials: "text-display-xl font-semibold",
-        ring: "ring-4 shadow-lg",
-        status: "bottom-3 right-3",
-        tick: "bottom-1 right-1",
+        badge: "bottom-2 right-2",
     },
 };
 
@@ -60,27 +57,50 @@ export const AvatarProfilePhoto = ({
 
     const renderMainContent = () => {
         if (src && !isFailed) {
-            return <img className="size-full rounded-full object-cover" src={src} alt={alt} onError={() => setIsFailed(true)} />;
+            return (
+                <img
+                    src={src}
+                    alt={alt}
+                    onError={() => setIsFailed(true)}
+                    className={cx(
+                        "size-full rounded-full object-cover",
+                        contrastBorder && "outline-1 -outline-offset-1 outline-avatar-contrast-border",
+                        styles[size].content,
+                    )}
+                />
+            );
         }
 
         if (initials) {
-            return <span className={cx("text-tertiary", styles[size].initials)}>{initials}</span>;
+            return (
+                <div className={cx("flex size-full items-center justify-center rounded-full border border-secondary_alt bg-tertiary", styles[size].content)}>
+                    <span className={cx("text-quaternary", styles[size].initials)}>{initials}</span>
+                </div>
+            );
         }
 
         if (PlaceholderIcon) {
-            return <PlaceholderIcon className={cx("text-utility-gray-500", styles[size].icon)} />;
+            return (
+                <div className={cx("flex size-full items-center justify-center rounded-full border border-secondary_alt bg-tertiary", styles[size].content)}>
+                    <PlaceholderIcon className={cx("text-utility-gray-400", styles[size].icon)} />
+                </div>
+            );
         }
 
-        return placeholder || <User01 className={cx("text-utility-gray-500", styles[size].icon)} />;
+        return (
+            <div className={cx("flex size-full items-center justify-center rounded-full border border-secondary_alt bg-tertiary", styles[size].content)}>
+                {placeholder || <User01 className={cx("text-utility-gray-500", styles[size].icon)} />}
+            </div>
+        );
     };
 
     const renderBadgeContent = () => {
         if (status) {
-            return <AvatarOnlineIndicator status={status} size={tickSizeMap[size]} className={styles[size].status} />;
+            return <AvatarOnlineIndicator status={status} size={tickSizeMap[size]} className={styles[size].badge} />;
         }
 
         if (verified) {
-            return <VerifiedTick size={tickSizeMap[size]} className={cx("absolute", styles[size].tick)} />;
+            return <VerifiedTick size={tickSizeMap[size]} className={cx("absolute", styles[size].badge)} />;
         }
 
         return badge;
@@ -89,15 +109,13 @@ export const AvatarProfilePhoto = ({
     return (
         <div
             className={cx(
-                "relative inline-flex shrink-0 items-center justify-center rounded-full bg-avatar-bg",
-                contrastBorder && "outline-1 -outline-offset-1 outline-avatar-contrast-border",
+                "relative flex shrink-0 items-center justify-center rounded-full bg-primary ring-1 ring-border-secondary_alt",
                 styles[size].root,
                 className,
             )}
         >
             {renderMainContent()}
             {renderBadgeContent()}
-            <div className={cx("absolute inset-0 rounded-full ring-avatar-profile-photo-border", styles[size].ring)}></div>
         </div>
     );
 };

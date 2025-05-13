@@ -1,9 +1,9 @@
 "use client";
 
 import type { AnchorHTMLAttributes, ButtonHTMLAttributes, DetailedHTMLProps, FC, ReactNode } from "react";
-import { isValidElement } from "react";
-import type { ButtonProps as AriaButtonProps, PressEvent } from "react-aria-components";
-import { Button as AriaButton } from "react-aria-components";
+import React, { isValidElement } from "react";
+import type { ButtonProps as AriaButtonProps } from "react-aria-components";
+import { Button as AriaButton, Link as AriaLink } from "react-aria-components";
 import { cx, sortCx } from "@/components/utils/cx";
 import { isReactComponent } from "@/components/utils/is-react-component";
 
@@ -70,14 +70,18 @@ export const styles = sortCx({
         },
         "link-gray": {
             root: [
-                "justify-normal rounded-xs p-0! text-tertiary hover:text-tertiary_hover hover:underline hover:underline-offset-2",
+                "justify-normal rounded-xs p-0! text-tertiary hover:text-tertiary_hover",
+                // Inner text underline
+                "*:data-text:underline *:data-text:decoration-transparent *:data-text:underline-offset-2 hover:*:data-text:decoration-current",
                 // Icon styles
                 "*:data-icon:text-fg-quaternary hover:*:data-icon:text-fg-quaternary_hover",
             ].join(" "),
         },
         "link-color": {
             root: [
-                "justify-normal rounded-xs p-0! text-brand-secondary hover:text-brand-secondary_hover hover:underline hover:underline-offset-2",
+                "justify-normal rounded-xs p-0! text-brand-secondary hover:text-brand-secondary_hover",
+                // Inner text underline
+                "*:data-text:underline *:data-text:decoration-transparent *:data-text:underline-offset-2 hover:*:data-text:decoration-current",
                 // Icon styles
                 "*:data-icon:text-fg-brand-secondary_alt hover:*:data-icon:text-fg-brand-secondary_hover",
             ].join(" "),
@@ -111,7 +115,9 @@ export const styles = sortCx({
         },
         "link-destructive": {
             root: [
-                "justify-normal rounded-xs p-0! text-error-primary outline-error hover:text-error-primary_hover hover:underline hover:underline-offset-2",
+                "justify-normal rounded-xs p-0! text-error-primary outline-error hover:text-error-primary_hover",
+                // Inner text underline
+                "*:data-text:underline *:data-text:decoration-transparent *:data-text:underline-offset-2 hover:*:data-text:decoration-current",
                 // Icon styles
                 "*:data-icon:text-fg-error-secondary hover:*:data-icon:text-fg-error-primary",
             ].join(" "),
@@ -162,12 +168,11 @@ export type Props = ButtonProps | LinkProps;
 export const Button = ({
     size = "sm",
     color = "primary",
+    children,
     className,
     noTextPadding,
     iconLeading: IconLeading,
     iconTrailing: IconTrailing,
-    children,
-    onClick,
     isDisabled: disabled,
     isExternal: external,
     isLoading: loading,
@@ -175,8 +180,7 @@ export const Button = ({
     ...rest
 }: Props) => {
     const href = "href" in rest ? rest.href : undefined;
-    // Feel free to replace `a` with `Link`
-    const Component = href ? "a" : AriaButton;
+    const Component = href ? AriaLink : AriaButton;
 
     const isIcon = (IconLeading || IconTrailing) && !children;
     const isLinkType = ["link-gray", "link-color", "link-destructive"].includes(color);
@@ -187,8 +191,6 @@ export const Button = ({
 
     if (href) {
         props = {
-            onClick,
-
             href: disabled ? undefined : href,
             target: external ? "_blank" : undefined,
             rel: external ? "noopener noreferrer" : undefined,
@@ -203,11 +205,6 @@ export const Button = ({
             type: rest.type || "button",
             isPending: loading,
             isDisabled: disabled,
-            onPress: (event: PressEvent) => {
-                // @ts-expect-error FIX ME
-                rest.onPress?.(event);
-                onClick?.(event as any);
-            },
         };
     }
 
@@ -258,7 +255,7 @@ export const Button = ({
             )}
 
             {children && (
-                <span data-text className={cx(!noTextPadding && "px-0.5")}>
+                <span data-text className={cx("transition-inherit-all", !noTextPadding && "px-0.5")}>
                     {children}
                 </span>
             )}

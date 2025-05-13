@@ -1,12 +1,14 @@
+"use client";
+
 import { Plus } from "@untitledui/icons";
 import type { ButtonProps } from "react-aria-components";
 import { cx } from "@/components/utils/cx";
 import { Tooltip, TooltipTrigger } from "../../tooltip/tooltip";
 
 const sizes = {
-    xs: "size-6",
-    sm: "size-8",
-    md: "size-10",
+    xs: { root: "size-6", icon: "size-4" },
+    sm: { root: "size-8", icon: "size-4" },
+    md: { root: "size-10", icon: "size-5" },
 };
 
 interface AvatarAddButtonProps extends ButtonProps {
@@ -19,13 +21,14 @@ export const AvatarAddButton = ({ size, className, title = "Add user", ...props 
     <Tooltip title={title}>
         <TooltipTrigger
             {...props}
+            aria-label={title}
             className={cx(
-                "flex cursor-pointer items-center justify-center rounded-full border border-dashed border-primary bg-primary text-fg-quaternary outline-focus-ring transition duration-100 ease-linear hover:bg-primary_hover hover:text-fg-quaternary_hover focus:outline-2 focus:outline-offset-2 disabled:border-gray-200 disabled:bg-secondary disabled:text-gray-200",
-                sizes[size],
+                "flex cursor-pointer items-center justify-center rounded-full border border-dashed border-primary bg-primary text-fg-quaternary outline-focus-ring transition duration-100 ease-linear hover:bg-primary_hover hover:text-fg-quaternary_hover focus-visible:outline-2 focus-visible:outline-offset-2 disabled:border-gray-200 disabled:bg-secondary disabled:text-gray-200",
+                sizes[size].root,
                 className,
             )}
         >
-            <Plus className="size-4 text-current transition-inherit-all" />
+            <Plus className={cx("text-current transition-inherit-all", sizes[size].icon)} />
         </TooltipTrigger>
     </Tooltip>
 );

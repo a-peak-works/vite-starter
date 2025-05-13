@@ -20,6 +20,8 @@ export const Popover = (props: PopoverProps) => {
                 cx(
                     "max-h-64! w-(--trigger-width) overflow-x-hidden overflow-y-auto rounded-lg bg-primary py-1 shadow-lg ring-1 ring-border-secondary_alt outline-hidden will-change-transform",
 
+                    // scrollbar styles
+                    // "[&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-alpha-black/15 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-track]:bg-primary [&::-webkit-scrollbar]:w-2",
                     state.isEntering &&
                         "duration-150 ease-out animate-in fade-in placement-right:origin-left placement-right:slide-in-from-left-0.5 placement-top:origin-bottom placement-top:slide-in-from-bottom-0.5 placement-bottom:origin-top placement-bottom:slide-in-from-top-0.5",
                     state.isExiting &&

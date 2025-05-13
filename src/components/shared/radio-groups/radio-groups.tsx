@@ -1,3 +1,5 @@
+"use client";
+
 export { RadioGroupIconSimple as IconSimple } from "./radio-group-icon-simple";
 export { RadioGroupIconCard as IconCard } from "./radio-group-icon-card";
 export { RadioGroupAvatar as Avatar } from "./radio-group-avatar";
