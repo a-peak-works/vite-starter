@@ -133,7 +133,7 @@ export const InputBase = ({
             {shortcut && (
                 <div
                     className={cx(
-                        "absolute inset-y-0.5 right-0.5 z-10 flex items-center rounded-r-[inherit] bg-linear-to-r from-transparent to-bg-primary to-40% pl-8",
+                        "pointer-events-none absolute inset-y-0.5 right-0.5 z-10 flex items-center rounded-r-[inherit] bg-linear-to-r from-transparent to-bg-primary to-40% pl-8",
                         sizes[size].shortcut,
                     )}
                 >

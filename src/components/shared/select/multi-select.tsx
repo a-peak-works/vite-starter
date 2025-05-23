@@ -216,7 +216,7 @@ export const MultiSelectBase = ({
     );
 };
 
-const InnerMultiSelect = ({ isDisabled, shortcut, shortcutClassName, placeholder }: MultiSelectProps) => {
+const InnerMultiSelect = ({ isDisabled, shortcut, shortcutClassName, placeholder }: Omit<MultiSelectProps, "selectedItems" | "children">) => {
     const focusManager = useFocusManager();
     const selectContext = useContext(ComboboxContext);
 

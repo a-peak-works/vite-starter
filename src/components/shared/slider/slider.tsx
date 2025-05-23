@@ -35,7 +35,7 @@ export const Slider = ({
         <AriaSlider {...rest} {...{ minValue, maxValue, defaultValue }} formatOptions={formatOptions ?? defaultFormatOptions}>
             <Label />
             <SliderTrack className="relative h-2 w-full rounded-full bg-quaternary">
-                {({ state: { values, getThumbValue, getThumbPercent, getFormattedValue, getThumbValueLabel } }) => {
+                {({ state: { values, getThumbValue, getThumbPercent, getFormattedValue } }) => {
                     const left = getThumbPercent(0);
                     const width = getThumbPercent(1) - left;
 

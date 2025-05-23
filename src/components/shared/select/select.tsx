@@ -108,12 +108,12 @@ const SelectValue = ({ isOpen, isFocused, isDisabled, size, placeholder, placeho
 
 export const SelectContext = createContext<{ size: "sm" | "md" }>({ size: "sm" });
 
-const Select = ({ placeholder = "Select", placeholderIcon, size = "sm", children, items, label, hint, tooltip, ...rest }: SelectProps) => {
+const Select = ({ placeholder = "Select", placeholderIcon, size = "sm", children, items, label, hint, tooltip, className, ...rest }: SelectProps) => {
     return (
         <SelectContext.Provider value={{ size }}>
-            <AriaSelect {...rest}>
+            <AriaSelect {...rest} className={(state) => cx("flex flex-col gap-1.5", typeof className === "function" ? className(state) : className)}>
                 {(state) => (
-                    <div className="flex flex-col gap-1.5">
+                    <>
                         {label && (
                             <Label isRequired={state.isRequired} tooltip={tooltip}>
                                 {label}
@@ -129,7 +129,7 @@ const Select = ({ placeholder = "Select", placeholderIcon, size = "sm", children
                         </Popover>
 
                         {hint && <HintText isInvalid={state.isInvalid}>{hint}</HintText>}
-                    </div>
+                    </>
                 )}
             </AriaSelect>
         </SelectContext.Provider>

@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import { ChevronDown } from "@untitledui/icons";
 import type { Key } from "react-aria-components";
 import { TextField } from "react-aria-components";

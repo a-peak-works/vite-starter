@@ -32,7 +32,13 @@ const Label = ({ isRequired, tooltip, tooltipDescription, className, ...props }:
 
             {tooltip && (
                 <Tooltip title={tooltip} description={tooltipDescription} placement="top">
-                    <TooltipTrigger className="cursor-pointer text-fg-quaternary transition duration-200 hover:text-fg-quaternary_hover focus:text-fg-quaternary_hover">
+                    <TooltipTrigger
+                        // `TooltipTrigger` inherts the disabled state from the parent form field
+                        // but we don't that. We want the tooltip be enabled even if the parent
+                        // field is disabled.
+                        isDisabled={false}
+                        className="cursor-pointer text-fg-quaternary transition duration-200 hover:text-fg-quaternary_hover focus:text-fg-quaternary_hover"
+                    >
                         <HelpCircle className="size-4" />
                     </TooltipTrigger>
                 </Tooltip>

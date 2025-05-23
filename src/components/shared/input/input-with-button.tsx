@@ -1,7 +1,6 @@
 "use client";
 
 import type { ReactNode } from "react";
-import React from "react";
 import { Copy01 } from "@untitledui/icons";
 import { TextField } from "react-aria-components";
 import type { CommonProps } from "@/components/shared/buttons/button";

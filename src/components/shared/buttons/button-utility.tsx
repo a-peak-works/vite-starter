@@ -1,6 +1,6 @@
 "use client";
 
-import type { DetailedHTMLProps, FC, HTMLAttributes, ReactNode } from "react";
+import type { AnchorHTMLAttributes, ButtonHTMLAttributes, DetailedHTMLProps, FC, ReactNode } from "react";
 import { isValidElement } from "react";
 import type { Placement } from "react-aria";
 import type { ButtonProps as AriaButtonProps } from "react-aria-components";
@@ -15,15 +15,38 @@ export const styles = {
     tertiary: "text-fg-quaternary hover:bg-primary_hover hover:text-fg-quaternary_hover",
 };
 
-export interface ButtonUtilityProps extends DetailedHTMLProps<Omit<HTMLAttributes<HTMLButtonElement>, "color" | "slot">, HTMLButtonElement> {
+/**
+ * Common props shared between button and anchor variants
+ */
+export interface CommonProps {
+    /** Whether the link should open in a new tab */
+    isExternal?: boolean;
+    /** Disables the button and shows a disabled state */
     isDisabled?: boolean;
-    color?: "secondary" | "tertiary";
+    /** The size variant of the button */
     size?: "xs" | "sm";
+    /** The color variant of the button */
+    color?: "secondary" | "tertiary";
     icon?: FC<{ className?: string }> | ReactNode;
-    slot?: AriaButtonProps["slot"];
     tooltip?: string;
     tooltipPlacement?: Placement;
 }
+
+/**
+ * Props for the button variant (non-link)
+ */
+export interface ButtonProps extends CommonProps, DetailedHTMLProps<Omit<ButtonHTMLAttributes<HTMLButtonElement>, "color" | "slot">, HTMLButtonElement> {
+    /** Slot name for react-aria component */
+    slot?: AriaButtonProps["slot"];
+}
+
+/**
+ * Props for the link variant (anchor tag)
+ */
+interface LinkProps extends CommonProps, DetailedHTMLProps<Omit<AnchorHTMLAttributes<HTMLAnchorElement>, "color">, HTMLAnchorElement> {}
+
+/** Union type of button and link props */
+export type Props = ButtonProps | LinkProps;
 
 export const ButtonUtility = ({
     tooltip,
@@ -35,7 +58,7 @@ export const ButtonUtility = ({
     color = "secondary",
     tooltipPlacement = "top",
     ...otherProps
-}: ButtonUtilityProps) => {
+}: Props) => {
     const Component = "href" in otherProps ? AriaLink : AriaButton;
 
     const content = (
