@@ -789,10 +789,6 @@
     --color-focus-ring: var(--color-brand-500);
     --color-footer-button-fg: var(--color-brand-200);
     --color-footer-button-fg_hover: var(--color-white);
-    --color-header-abstract-100-bg: var(--color-brand-100);
-    --color-header-abstract-200-bg: var(--color-brand-200);
-    --color-header-abstract-300-bg: var(--color-brand-300);
-    --color-header-abstract-50-bg: var(--color-brand-50);
     --color-icon-fg-brand: var(--color-brand-600);
     --color-icon-fg-brand_on-brand: var(--color-brand-200);
     /* THESE NEED TO BE REMOED */
@@ -1128,7 +1124,7 @@
         --color-border-disabled_subtle: var(--color-gray-dark-mode-800);
         --color-border-tertiary: var(--color-gray-dark-mode-800);
         --color-border-brand_alt: var(--color-gray-dark-mode-700);
-        --color-border-secondary_alt: var(--color-gray-dark-mode-700);
+        --color-border-secondary_alt: var(--color-gray-dark-mode-800);
 
         /* FOREGROUND COLORS */
         --color-fg-secondary: var(--color-gray-dark-mode-300);
@@ -1205,10 +1201,6 @@
         --color-focus-ring: var(--color-brand-500);
         --color-footer-button-fg: var(--color-gray-dark-mode-300);
         --color-footer-button-fg_hover: var(--color-gray-dark-mode-100);
-        --color-header-abstract-100-bg: var(--color-gray-dark-mode-800);
-        --color-header-abstract-200-bg: var(--color-gray-dark-mode-700);
-        --color-header-abstract-300-bg: var(--color-gray-dark-mode-600);
-        --color-header-abstract-50-bg: var(--color-gray-dark-mode-900);
         --color-icon-fg-brand: var(--color-gray-dark-mode-400);
         --color-icon-fg-brand_on-brand: var(--color-gray-dark-mode-400);
         --color-nav-item-button-icon-fg: var(--color-gray-dark-mode-400);
