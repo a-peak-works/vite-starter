@@ -57,7 +57,7 @@ export const Tooltip = ({
     children,
     arrow = false,
     delay = 300,
-    closeDelay = 250,
+    closeDelay = 0,
     trigger,
     isDisabled,
     isOpen,
