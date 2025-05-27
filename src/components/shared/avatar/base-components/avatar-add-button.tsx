@@ -1,5 +1,3 @@
-"use client";
-
 import { Plus } from "@untitledui/icons";
 import type { ButtonProps } from "react-aria-components";
 import { cx } from "@/components/utils/cx";

@@ -1,5 +1,3 @@
-"use client";
-
 import type { FC, ReactNode } from "react";
 import type { RadioGroupProps } from "react-aria-components";
 import { Radio, RadioGroup } from "react-aria-components";

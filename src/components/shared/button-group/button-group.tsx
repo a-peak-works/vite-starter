@@ -1,5 +1,3 @@
-"use client";
-
 import { type FC, type PropsWithChildren, type ReactNode, type RefAttributes, createContext, isValidElement, useContext } from "react";
 import { ToggleButton, ToggleButtonGroup, type ToggleButtonGroupProps, type ToggleButtonProps } from "react-aria-components";
 import { cx, sortCx } from "@/components/utils/cx";

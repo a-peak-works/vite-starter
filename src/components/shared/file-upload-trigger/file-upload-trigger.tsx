@@ -1,5 +1,3 @@
-"use client";
-
 import type { DetailedReactHTMLElement, ReactNode } from "react";
 import React, { cloneElement, useRef } from "react";
 import { filterDOMProps } from "@react-aria/utils";

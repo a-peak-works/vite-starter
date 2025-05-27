@@ -1,5 +1,3 @@
-"use client";
-
 import { cx } from "@/components/utils/cx";
 
 interface TagCheckboxProps {

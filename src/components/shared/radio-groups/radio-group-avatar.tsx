@@ -1,5 +1,3 @@
-"use client";
-
 import type { RadioGroupProps } from "react-aria-components";
 import { Label, Radio, RadioGroup, Text } from "react-aria-components";
 import { Avatar as AvatarComponent } from "@/components/shared/avatar/avatar";

@@ -1,5 +1,3 @@
-"use client";
-
 import type { HTMLAttributes } from "react";
 import type { InputBaseProps } from "@/components/shared/input";
 import { InputBase, TextField } from "@/components/shared/input";

@@ -1,5 +1,3 @@
-"use client";
-
 import type { SliderProps as AriaSliderProps } from "react-aria-components";
 import { Slider as AriaSlider, Label, SliderOutput, SliderThumb, SliderTrack } from "react-aria-components";
 import { cx, sortCx } from "@/components/utils/cx";

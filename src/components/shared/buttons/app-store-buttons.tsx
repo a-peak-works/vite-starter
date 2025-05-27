@@ -1,5 +1,3 @@
-"use client";
-
 import type { AnchorHTMLAttributes } from "react";
 import { cx } from "@/components/utils/cx";
 

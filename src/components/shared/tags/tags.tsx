@@ -1,5 +1,3 @@
-"use client";
-
 import { type PropsWithChildren, type RefAttributes, createContext, useContext } from "react";
 import {
     Tag as AriaTag,

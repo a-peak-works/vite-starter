@@ -1,5 +1,3 @@
-"use client";
-
 import type { AnchorHTMLAttributes, ButtonHTMLAttributes, DetailedHTMLProps, FC, ReactNode } from "react";
 import React, { isValidElement } from "react";
 import type { ButtonProps as AriaButtonProps } from "react-aria-components";

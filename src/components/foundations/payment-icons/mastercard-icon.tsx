@@ -1,5 +1,3 @@
-"use client";
-
 import type { SVGProps } from "react";
 
 const MastercardIcon = ({ className, ...props }: SVGProps<SVGSVGElement>) => {

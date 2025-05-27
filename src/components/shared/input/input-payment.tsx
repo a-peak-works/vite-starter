@@ -1,5 +1,3 @@
-"use client";
-
 import { useControlledState } from "@react-stately/utils";
 import { TextField } from "react-aria-components";
 import { AmexIcon, DiscoverIcon, MastercardIcon, UnionPayIcon, VisaIcon } from "@/components/foundations/payment-icons";

@@ -1,5 +1,3 @@
-"use client";
-
 import { useCallback, useState } from "react";
 
 const DEFAULT_TIMEOUT = 2000;

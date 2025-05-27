@@ -1,5 +1,3 @@
-"use client";
-
 import type { FC, ReactNode } from "react";
 import { isValidElement } from "react";
 import { ArrowRight } from "@untitledui/icons";

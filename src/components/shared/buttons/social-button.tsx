@@ -1,5 +1,3 @@
-"use client";
-
 import type { AnchorHTMLAttributes, ButtonHTMLAttributes, DetailedHTMLProps } from "react";
 import React from "react";
 import type { ButtonProps as AriaButtonProps } from "react-aria-components";

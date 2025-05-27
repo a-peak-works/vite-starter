@@ -1,5 +1,3 @@
-"use client";
-
 import type { ReactNode } from "react";
 import type { SwitchProps } from "react-aria-components";
 import { Switch } from "react-aria-components";

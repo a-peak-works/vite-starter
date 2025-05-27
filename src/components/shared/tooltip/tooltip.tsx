@@ -1,5 +1,3 @@
-"use client";
-
 import type { DetailedReactHTMLElement, ReactNode, RefAttributes } from "react";
 import { cloneElement, useRef } from "react";
 import type { Placement } from "@react-types/overlays";

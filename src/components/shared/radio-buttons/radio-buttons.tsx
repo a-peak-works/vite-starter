@@ -1,5 +1,3 @@
-"use client";
-
 import { type ReactNode, type Ref, createContext, useContext } from "react";
 import { RadioGroup as AriaRadioGroup, type RadioGroupProps as AriaRadioGroupProps, type RadioProps as AriaRadioProps, Radio } from "react-aria-components";
 import { cx } from "@/components/utils/cx";

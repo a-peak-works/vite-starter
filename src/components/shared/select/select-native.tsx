@@ -1,5 +1,3 @@
-"use client";
-
 import { type ChangeEventHandler, useId } from "react";
 import { ChevronDown } from "@untitledui/icons";
 import HintText from "../input/hint-text";

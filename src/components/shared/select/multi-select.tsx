@@ -1,5 +1,3 @@
-"use client";
-
 import type { FocusEventHandler, KeyboardEvent, PointerEventHandler, RefAttributes } from "react";
 import { createContext, useCallback, useContext, useRef, useState } from "react";
 import { SearchLg } from "@untitledui/icons";

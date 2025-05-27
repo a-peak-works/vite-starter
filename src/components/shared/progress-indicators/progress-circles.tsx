@@ -1,5 +1,3 @@
-"use client";
-
 import { cx as clx, sortCx } from "@/components/utils/cx";
 
 interface ProgressBarProps {

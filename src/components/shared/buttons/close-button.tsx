@@ -1,5 +1,3 @@
-"use client";
-
 import type { HTMLAttributes } from "react";
 import { X as CloseIcon } from "@untitledui/icons";
 import { cx } from "@/components/utils/cx";

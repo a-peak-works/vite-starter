@@ -1,5 +1,3 @@
-"use client";
-
 import type { SVGProps } from "react";
 
 const VisaIcon = ({ className, ...props }: SVGProps<SVGSVGElement>) => {

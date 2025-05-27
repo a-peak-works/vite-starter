@@ -1,5 +1,3 @@
-"use client";
-
 import { type ReactNode } from "react";
 import { cx } from "@/components/utils/cx";
 import { Avatar, type AvatarProps } from "./avatar";
