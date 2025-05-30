@@ -3,8 +3,8 @@ import { TextField } from "react-aria-components";
 import { AmexIcon, DiscoverIcon, MastercardIcon, UnionPayIcon, VisaIcon } from "@/components/foundations/payment-icons";
 import type { InputBaseProps } from "@/components/shared/input";
 import { InputBase } from "@/components/shared/input";
-import HintText from "@/components/shared/input/hint-text";
-import Label from "@/components/shared/input/label";
+import { HintText } from "@/components/shared/input/hint-text";
+import { Label } from "@/components/shared/input/label";
 import { cx } from "@/components/utils/cx";
 
 const cardTypes = [

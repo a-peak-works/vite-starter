@@ -1,8 +1,8 @@
 import type { HTMLAttributes } from "react";
 import type { InputBaseProps } from "@/components/shared/input";
 import { InputBase, TextField } from "@/components/shared/input";
-import HintText from "@/components/shared/input/hint-text";
-import Label from "@/components/shared/input/label";
+import { HintText } from "@/components/shared/input/hint-text";
+import { Label } from "@/components/shared/input/label";
 import { cx } from "@/components/utils/cx";
 
 interface InputPrefixProps extends HTMLAttributes<HTMLDivElement> {

@@ -2,8 +2,8 @@ import type { ReactNode, Ref } from "react";
 import React from "react";
 import type { TextAreaProps as AriaTextAreaProps, TextFieldProps as AriaTextFieldProps } from "react-aria-components";
 import { TextArea as AriaTextArea } from "react-aria-components";
-import HintText from "@/components/shared/input/hint-text";
-import Label from "@/components/shared/input/label";
+import { HintText } from "@/components/shared/input/hint-text";
+import { Label } from "@/components/shared/input/label";
 import { cx } from "@/components/utils/cx";
 import { TextField } from "../input";
 

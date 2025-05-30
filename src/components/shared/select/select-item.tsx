@@ -90,5 +90,3 @@ export const SelectItem = ({ label, id, value, avatarUrl, supportingText, isDisa
         </AriaListBoxItem>
     );
 };
-
-export default SelectItem;

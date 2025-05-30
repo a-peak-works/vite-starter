@@ -80,14 +80,14 @@ export const AvatarProfilePhoto = ({
         if (PlaceholderIcon) {
             return (
                 <div className={cx("flex size-full items-center justify-center rounded-full border border-secondary_alt bg-tertiary", styles[size].content)}>
-                    <PlaceholderIcon className={cx("text-utility-gray-400", styles[size].icon)} />
+                    <PlaceholderIcon className={cx("text-fg-quaternary", styles[size].icon)} />
                 </div>
             );
         }
 
         return (
             <div className={cx("flex size-full items-center justify-center rounded-full border border-secondary_alt bg-tertiary", styles[size].content)}>
-                {placeholder || <User01 className={cx("text-utility-gray-500", styles[size].icon)} />}
+                {placeholder || <User01 className={cx("text-fg-quaternary", styles[size].icon)} />}
             </div>
         );
     };

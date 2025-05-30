@@ -2,8 +2,8 @@ import type { ComponentType, HTMLAttributes, ReactNode, Ref } from "react";
 import { HelpCircle, InfoCircle } from "@untitledui/icons";
 import type { InputProps as AriaInputProps, TextFieldProps as AriaTextFieldProps } from "react-aria-components";
 import { Input as AriaInput, TextField as AriaTextField, Group } from "react-aria-components";
-import HintText from "@/components/shared/input/hint-text";
-import Label from "@/components/shared/input/label";
+import { HintText } from "@/components/shared/input/hint-text";
+import { Label } from "@/components/shared/input/label";
 import { Tooltip, TooltipTrigger } from "@/components/shared/tooltip/tooltip";
 import { cx, sortCx } from "@/components/utils/cx";
 

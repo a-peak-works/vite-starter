@@ -9,7 +9,7 @@ interface HintTextProps extends AriaTextProps {
     ref?: Ref<HTMLElement>;
 }
 
-const HintText = ({ isInvalid, className, ...props }: HintTextProps) => {
+export const HintText = ({ isInvalid, className, ...props }: HintTextProps) => {
     return (
         <AriaText
             {...props}
@@ -28,5 +28,3 @@ const HintText = ({ isInvalid, className, ...props }: HintTextProps) => {
 };
 
 HintText.displayName = "HintText";
-
-export default HintText;

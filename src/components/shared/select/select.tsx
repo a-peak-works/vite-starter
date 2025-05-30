@@ -4,13 +4,13 @@ import { ChevronDown } from "@untitledui/icons";
 import type { SelectProps as AriaSelectProps } from "react-aria-components";
 import { Button as AriaButton, ListBox as AriaListBox, Select as AriaSelect, SelectValue as AriaSelectValue } from "react-aria-components";
 import { Avatar } from "@/components/shared/avatar/avatar";
-import HintText from "@/components/shared/input/hint-text";
-import Label from "@/components/shared/input/label";
+import { HintText } from "@/components/shared/input/hint-text";
+import { Label } from "@/components/shared/input/label";
 import { cx } from "@/components/utils/cx";
 import { isReactComponent } from "@/components/utils/is-react-component";
 import { ComboBox } from "./combobox";
 import { Popover } from "./popover";
-import Item from "./select-item";
+import { SelectItem } from "./select-item";
 
 export type SelectItemType = {
     id: string;
@@ -136,9 +136,9 @@ const Select = ({ placeholder = "Select", placeholderIcon, size = "sm", children
 
 const _Select = Select as typeof Select & {
     ComboBox: typeof ComboBox;
-    Item: typeof Item;
+    Item: typeof SelectItem;
 };
 _Select.ComboBox = ComboBox;
-_Select.Item = Item;
+_Select.Item = SelectItem;
 
 export { _Select as Select };

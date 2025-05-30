@@ -12,8 +12,8 @@ import {
 } from "react-aria-components";
 import { cx } from "@/components/utils/cx";
 import { useResizeObserver } from "@/hooks/use-resize-observer";
-import HintText from "../input/hint-text";
-import Label from "../input/label";
+import { HintText } from "../input/hint-text";
+import { Label } from "../input/label";
 import { Popover } from "./popover";
 import { type CommonProps, SelectContext, type SelectItemType, sizes } from "./select";
 

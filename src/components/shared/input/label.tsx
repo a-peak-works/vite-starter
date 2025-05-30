@@ -13,7 +13,7 @@ interface LabelProps extends AriaLabelProps {
     ref?: Ref<HTMLLabelElement>;
 }
 
-const Label = ({ isRequired, tooltip, tooltipDescription, className, ...props }: LabelProps) => {
+export const Label = ({ isRequired, tooltip, tooltipDescription, className, ...props }: LabelProps) => {
     return (
         <AriaLabel
             // Used for conditionally hiding/showing the label element via CSS:
@@ -46,5 +46,3 @@ const Label = ({ isRequired, tooltip, tooltipDescription, className, ...props }:
 };
 
 Label.displayName = "Label";
-
-export default Label;

@@ -9,7 +9,7 @@ import {
 import Dot from "@/components/foundations/dot-icon";
 import { cx } from "@/components/utils/cx";
 import { Avatar } from "../avatar/avatar";
-import TagCheckbox from "./base-components/tag-checkbox";
+import { TagCheckbox } from "./base-components/tag-checkbox";
 import { TagCloseX } from "./base-components/tag-close-x";
 
 export interface TagItem {

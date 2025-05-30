@@ -1,7 +1,7 @@
 import { type ChangeEventHandler, useId } from "react";
 import { ChevronDown } from "@untitledui/icons";
-import HintText from "../input/hint-text";
-import Label from "../input/label";
+import { HintText } from "../input/hint-text";
+import { Label } from "../input/label";
 
 export const NativeSelect = (props: {
     label?: string;

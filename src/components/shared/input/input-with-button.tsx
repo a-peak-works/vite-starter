@@ -6,8 +6,8 @@ import type { CommonProps } from "@/components/shared/buttons/button";
 import { Button } from "@/components/shared/buttons/button";
 import type { InputBaseProps } from "@/components/shared/input";
 import { InputBase } from "@/components/shared/input";
-import HintText from "@/components/shared/input/hint-text";
-import Label from "@/components/shared/input/label";
+import { HintText } from "@/components/shared/input/hint-text";
+import { Label } from "@/components/shared/input/label";
 import { cx } from "@/components/utils/cx";
 
 interface InputWithButtonProps extends Omit<InputBaseProps, "icon"> {
@@ -45,7 +45,6 @@ export const InputWithButton = ({
                     <div className="flex h-max w-full flex-row justify-center">
                         <InputBase {...props} {...{ isDisabled, isInvalid }} wrapperClassName="rounded-r-none z-10" />
 
-                        {/* TODO: Take this button out of here and move it to be a prop so the user can fully control the button. */}
                         <Button
                             onClick={onClick}
                             color={buttonColor}

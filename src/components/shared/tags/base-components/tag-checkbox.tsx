@@ -8,7 +8,7 @@ interface TagCheckboxProps {
     isDisabled?: boolean;
 }
 
-const TagCheckbox = ({ className, isFocused, isSelected, isDisabled, size = "sm" }: TagCheckboxProps) => {
+export const TagCheckbox = ({ className, isFocused, isSelected, isDisabled, size = "sm" }: TagCheckboxProps) => {
     return (
         <div
             className={cx(
@@ -41,5 +41,3 @@ const TagCheckbox = ({ className, isFocused, isSelected, isDisabled, size = "sm"
     );
 };
 TagCheckbox.displayName = "TagCheckbox";
-
-export default TagCheckbox;

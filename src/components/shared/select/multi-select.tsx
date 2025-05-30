@@ -10,12 +10,12 @@ import { cx } from "@/components/utils/cx";
 import { useResizeObserver } from "@/hooks/use-resize-observer";
 import { Avatar } from "../avatar/avatar";
 import type { IconComponentType } from "../badges/badge-types";
-import HintText from "../input/hint-text";
-import Label from "../input/label";
+import { HintText } from "../input/hint-text";
+import { Label } from "../input/label";
 import { TagCloseX } from "../tags/base-components/tag-close-x";
 import { Popover } from "./popover";
 import { type SelectItemType, sizes } from "./select";
-import SelectItem from "./select-item";
+import { SelectItem } from "./select-item";
 
 interface ComboBoxValueProps extends RefAttributes<HTMLDivElement> {
     size: "sm" | "md";
@@ -110,7 +110,6 @@ export const MultiSelectBase = ({
         [selectedItems, onItemCleared],
     );
 
-    // TODO: `onSelectionChange` is being called on blur thus causing the already deleted item to reappear
     const onSelectionChange = (id: Key | null) => {
         if (!id) {
             return;
@@ -268,7 +267,6 @@ const InnerMultiSelect = ({ isDisabled, shortcut, shortcutClassName, placeholder
     return (
         <div className="relative flex w-full flex-1 flex-row flex-wrap items-center justify-start gap-1.5">
             {!isSelectionEmpty &&
-                // TODO: Use <TagList /> here
                 selectContext?.selectedItems?.items?.map((value) => (
                     <span key={value.id} className="flex items-center rounded-md bg-primary py-0.5 pr-1 pl-[5px] ring-1 ring-border-primary ring-inset">
                         <Avatar size="xxs" alt={value?.label} src={value?.avatarUrl} />
