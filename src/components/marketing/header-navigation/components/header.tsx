@@ -2,11 +2,11 @@ import type { ReactNode } from "react";
 import { useRef, useState } from "react";
 import { ChevronDown } from "@untitledui/icons";
 import { Button as AriaButton, Dialog, DialogTrigger, Popover } from "react-aria-components";
-import { UntitledLogo } from "@/components/foundations/logo/UntitledLogo";
-import { UntitledLogoMinimal } from "@/components/foundations/logo/UntitledLogoMinimal";
-import { Button } from "@/components/shared/buttons/button";
-import { cx } from "@/components/utils/cx";
-import { DropdownMenuSimple } from "../dropdown-header-navigation";
+import { Button } from "@/components/base/buttons/button";
+import { UntitledLogo } from "@/components/foundations/logo/untitledui-logo";
+import { UntitledLogoMinimal } from "@/components/foundations/logo/untitledui-logo-minimal";
+import { DropdownMenuSimple } from "@/components/marketing/header-navigation/dropdown-header-navigation";
+import { cx } from "@/utils/cx";
 
 type HeaderNavItem = {
     label: string;
@@ -15,18 +15,10 @@ type HeaderNavItem = {
 };
 
 const headerNavItems: HeaderNavItem[] = [
-    {
-        label: "Products",
-        href: "/products",
-        menu: <DropdownMenuSimple />,
-    },
+    { label: "Products", href: "/products", menu: <DropdownMenuSimple /> },
     { label: "Services", href: "/Services", menu: <DropdownMenuSimple /> },
     { label: "Pricing", href: "/pricing" },
-    {
-        label: "Resources",
-        href: "/resources",
-        menu: <DropdownMenuSimple />,
-    },
+    { label: "Resources", href: "/resources", menu: <DropdownMenuSimple /> },
     { label: "About", href: "/about" },
 ];
 
@@ -111,8 +103,8 @@ export const Header = ({ items = headerNavItems, isFullWidth, isFloating, classN
         <header
             ref={headerRef}
             className={cx(
-                "relative flex h-[72px] w-full items-center justify-center md:h-20",
-                isFloating && "h-16 md:h-[76px] md:pt-3",
+                "relative flex h-18 w-full items-center justify-center md:h-20",
+                isFloating && "h-16 md:h-19 md:pt-3",
                 isFullWidth && !isFloating ? "has-aria-expanded:bg-primary" : "max-md:has-aria-expanded:bg-primary",
                 className,
             )}
@@ -121,21 +113,21 @@ export const Header = ({ items = headerNavItems, isFullWidth, isFloating, classN
                 <div
                     className={cx(
                         "flex w-full justify-between gap-4",
-                        isFloating && "ring-border-secondary_alt md:rounded-2xl md:bg-primary md:py-3 md:pr-3 md:pl-4 md:shadow-xs md:ring-1",
+                        isFloating && "ring-secondary_alt md:rounded-2xl md:bg-primary md:py-3 md:pr-3 md:pl-4 md:shadow-xs md:ring-1",
                     )}
                 >
                     <div className="flex flex-1 items-center gap-5">
-                        <UntitledLogo className="h-8 md:hidden lg:inline-block" />
+                        <UntitledLogo className="h-8 md:max-lg:hidden" />
                         <UntitledLogoMinimal className="hidden h-8 md:inline-block lg:hidden" />
 
                         {/* Desktop navigation */}
-                        <nav className="hidden md:block">
+                        <nav className="max-md:hidden">
                             <ul className="flex items-center gap-0.5">
                                 {items.map((navItem) => (
                                     <li key={navItem.label}>
                                         {navItem.menu ? (
                                             <DialogTrigger defaultOpen={autoOpenMenu && navItem.label === "Resources"}>
-                                                <AriaButton className="flex cursor-pointer items-center gap-0.5 rounded-lg px-1.5 py-1 text-md font-semibold text-secondary outline-focus-ring transition duration-100 ease-linear hover:text-secondary_hover focus:outline-2 focus:outline-offset-2">
+                                                <AriaButton className="flex cursor-pointer items-center gap-0.5 rounded-lg px-1.5 py-1 text-md font-semibold text-secondary outline-focus-ring transition duration-100 ease-linear hover:text-secondary_hover focus-visible:outline-2 focus-visible:outline-offset-2">
                                                     <span className="px-0.5">{navItem.label}</span>
 
                                                     <ChevronDown className="size-4 rotate-0 stroke-[2.625px] text-fg-quaternary transition duration-100 ease-linear in-aria-expanded:-rotate-180" />
@@ -150,7 +142,7 @@ export const Header = ({ items = headerNavItems, isFullWidth, isFloating, classN
                                                             isExiting && "duration-150 ease-in animate-out fade-out slide-out-to-top-1",
                                                         )
                                                     }
-                                                    offset={isFloating || isFullWidth ? 0 : 12}
+                                                    offset={isFloating || isFullWidth ? 0 : 8}
                                                     containerPadding={0}
                                                     triggerRef={(isFloating && isFullWidth) || isFullWidth ? headerRef : undefined}
                                                 >
@@ -173,7 +165,7 @@ export const Header = ({ items = headerNavItems, isFullWidth, isFloating, classN
                                         ) : (
                                             <a
                                                 href={navItem.href}
-                                                className="flex cursor-pointer items-center gap-0.5 rounded-lg px-1.5 py-1 text-md font-semibold text-secondary outline-focus-ring transition duration-100 ease-linear hover:text-secondary_hover focus:outline-2 focus:outline-offset-2"
+                                                className="flex cursor-pointer items-center gap-0.5 rounded-lg px-1.5 py-1 text-md font-semibold text-secondary outline-focus-ring transition duration-100 ease-linear hover:text-secondary_hover focus:outline-offset-2 focus-visible:outline-2"
                                             >
                                                 <span className="px-0.5">{navItem.label}</span>
                                             </a>
@@ -193,14 +185,15 @@ export const Header = ({ items = headerNavItems, isFullWidth, isFloating, classN
                         </Button>
                     </div>
 
-                    {/* Mobile Menu and Menu Trigger */}
+                    {/* Mobile menu and menu trigger */}
                     <DialogTrigger>
                         <AriaButton
-                            className={({ isFocused, isHovered }) =>
+                            aria-label="Toggle navigation menu"
+                            className={({ isFocusVisible, isHovered }) =>
                                 cx(
-                                    "group ml-auto rounded-lg p-2 md:hidden",
+                                    "group ml-auto cursor-pointer rounded-lg p-2 md:hidden",
                                     isHovered && "bg-primary_hover",
-                                    isFocused && "outline-2 outline-offset-2 outline-focus-ring",
+                                    isFocusVisible && "outline-2 outline-offset-2 outline-focus-ring",
                                 )
                             }
                         >

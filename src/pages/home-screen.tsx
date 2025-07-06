@@ -1,8 +1,8 @@
 import { lazy } from "react";
 import { BookOpen01, Check, Copy01, Cube01, HelpCircle } from "@untitledui/icons";
-import { UntitledLogoMinimal } from "@/components/foundations/logo/UntitledLogoMinimal";
-import { Button } from "@/components/shared/buttons/button";
-import { ButtonUtility } from "@/components/shared/buttons/button-utility";
+import { Button } from "@/components/base/buttons/button";
+import { ButtonUtility } from "@/components/base/buttons/button-utility";
+import { UntitledLogoMinimal } from "@/components/foundations/logo/untitledui-logo-minimal";
 import { useClipboard } from "@/hooks/use-clipboard";
 
 const Header = lazy(() => import("@/components/marketing/header-navigation/components/header").then((mod) => ({ default: mod.Header })));
@@ -70,15 +70,15 @@ export const HomeScreen = () => {
                 </div>
 
                 <div className="mt-6 flex items-center gap-3">
-                    <Button isExternal href="https://untitledui-docs.vercel.app/" color="link-color" size="lg" iconLeading={BookOpen01}>
+                    <Button href="https://untitledui-docs.vercel.app/" color="link-color" size="lg" iconLeading={BookOpen01}>
                         Docs
                     </Button>
                     <div className="h-px w-4 bg-brand-solid" />
-                    <Button isExternal href="https://untitledui-docs.vercel.app/resources/icons" color="link-color" size="lg" iconLeading={Cube01}>
+                    <Button href="https://untitledui-docs.vercel.app/resources/icons" color="link-color" size="lg" iconLeading={Cube01}>
                         Icons
                     </Button>
                     <div className="h-px w-4 bg-brand-solid" />
-                    <Button isExternal href="https://dsc.gg/untitledui" color="link-color" size="lg" iconLeading={HelpCircle}>
+                    <Button href="https://dsc.gg/untitledui" color="link-color" size="lg" iconLeading={HelpCircle}>
                         Help
                     </Button>
                 </div>

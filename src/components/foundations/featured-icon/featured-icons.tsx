@@ -1,7 +1,7 @@
 import type { FC, ReactNode, Ref } from "react";
 import { isValidElement } from "react";
-import { cx, sortCx } from "@/components/utils/cx";
-import { isReactComponent } from "@/components/utils/is-react-component";
+import { cx, sortCx } from "@/utils/cx";
+import { isReactComponent } from "@/utils/is-react-component";
 
 const iconsSizes = {
     sm: "*:data-icon:size-4",
@@ -72,7 +72,7 @@ const styles = sortCx({
         },
         colors: {
             brand: "",
-            gray: "text-fg-secondary ring-border-primary",
+            gray: "text-fg-secondary ring-primary",
             error: "",
             warning: "",
             success: "",
@@ -82,7 +82,7 @@ const styles = sortCx({
         base: [
             "bg-primary_alt ring-1 ring-inset before:absolute before:inset-1",
             // Shadow
-            "before:shadow-[0px_1px_2px_0px_rgba(0,0,0,0.1),0px_3px_3px_0px_rgba(0,0,0,0.09),1px_8px_5px_0px_rgba(0,0,0,0.05),2px_21px_6px_0px_rgba(0,0,0,0),0px_0px_0px_1px_rgba(0,0,0,0.08),1px_13px_5px_0px_rgba(0,0,0,0.01),0px_-2px_2px_0px_rgba(0,0,0,0.13)_inset] before:ring-1 before:ring-border-secondary_alt",
+            "before:shadow-[0px_1px_2px_0px_rgba(0,0,0,0.1),0px_3px_3px_0px_rgba(0,0,0,0.09),1px_8px_5px_0px_rgba(0,0,0,0.05),2px_21px_6px_0px_rgba(0,0,0,0),0px_0px_0px_1px_rgba(0,0,0,0.08),1px_13px_5px_0px_rgba(0,0,0,0.01),0px_-2px_2px_0px_rgba(0,0,0,0.13)_inset] before:ring-1 before:ring-secondary_alt",
         ].join(" "),
         sizes: {
             sm: "size-8 rounded-[8px] before:rounded-[4px]",
@@ -92,7 +92,7 @@ const styles = sortCx({
         },
         colors: {
             brand: "",
-            gray: "text-fg-secondary ring-border-primary",
+            gray: "text-fg-secondary ring-primary",
             error: "",
             warning: "",
             success: "",
@@ -128,11 +128,11 @@ interface FeaturedIconProps {
 }
 
 export const FeaturedIcon = (props: FeaturedIconProps) => {
-    const { size = "sm", theme: variant = "light", color = "brand", icon: Icon, ...rest } = props;
+    const { size = "sm", theme: variant = "light", color = "brand", icon: Icon, ...otherProps } = props;
 
     return (
         <div
-            {...rest}
+            {...otherProps}
             data-featured-icon
             className={cx(
                 "relative flex shrink-0 items-center justify-center",
